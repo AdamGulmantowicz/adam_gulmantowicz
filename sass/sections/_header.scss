@@ -1,0 +1,12 @@
+.header {
+  min-height: 100vh;
+  background: url(../img/bananas.png);
+  position: relative;
+
+  &__heading {
+    color: $color-white;
+    position: absolute;
+    right: 0;
+    top: 50%;
+  }
+}

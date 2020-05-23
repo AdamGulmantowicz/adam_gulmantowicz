@@ -1,0 +1,39 @@
+.technology {
+  text-align: center;
+  margin: $mg-huge * 2 auto;
+
+  &__list {
+    margin-top: $mg-huge;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 6rem;
+
+    i {
+      margin: 1rem 2rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-m) {
+  .technology {
+    &__list {
+
+      i {
+        margin: 2rem 4rem;
+      }
+    }
+  }
+}
+
+@include breakpoint($breakpoint-l) {
+  .technology {
+    &__list {
+
+      i {
+        margin: 3rem 6rem;
+      }
+    }
+  }
+}

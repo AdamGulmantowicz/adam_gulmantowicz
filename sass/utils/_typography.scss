@@ -1,0 +1,44 @@
+.heading {
+
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+
+.text {
+  font-size: 1.6rem;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.heading,
+.text,
+.title {
+
+  &--white {
+    color: $color-white;
+  }
+
+  &--grey {
+    color: $color-grey0;
+  }
+
+  &--yellow {
+    color: $color-second;
+  }
+
+  &--grey-light {
+    color: $color-grey2;
+  }
+}
+
+[class^="devicon-"],
+[class*=" devicon-"] {
+  &::before {
+    background-image: $gradient-main;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+}

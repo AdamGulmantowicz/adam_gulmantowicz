@@ -1,0 +1,85 @@
+@keyframes curveBorder {
+  from {
+    border-color: transparent;
+    border-radius: 0 0 0 0;
+  }
+
+  to {
+    // border-radius: 0 0 0 50%/150px;
+    border-radius: 0 0 0 50%/300px;
+
+    @include breakpoint($breakpoint-l) {}
+  }
+}
+
+@keyframes textFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textFadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes textFadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(10%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes textFadeBottom {
+  from {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0) translate(-50%, -50%);
+  }
+
+  to {
+    transform: rotate(360deg) translate(-50%, -50%);
+  }
+}
+
+@keyframes scaleToFull {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 200px;
+
+    @include breakpoint($breakpoint-l) {
+      width: 400px;
+    }
+  }
+}

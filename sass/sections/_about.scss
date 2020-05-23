@@ -1,0 +1,44 @@
+.about {
+  min-height: 100vh;
+
+  &__wrap {
+    padding: $mg-huge $mg-huge * 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__img {
+    margin-top: $mg-big;
+    display: block;
+    max-width: 200px;
+    border-radius: 3px;
+    box-shadow: $box-sha1;
+  }
+
+  &__text {
+    text-align: center;
+    max-width: 500px;
+
+    p {
+      font-weight: 300;
+      font-size: 1.6rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-m) {
+  .about {
+    padding: $mg-huge * 4 0;
+
+    &__wrap {
+      flex-direction: row-reverse;
+    }
+
+    &__img {
+      margin-top: 0;
+      max-width: 300px;
+    }
+  }
+}
