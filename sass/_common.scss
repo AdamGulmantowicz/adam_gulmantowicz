@@ -8,9 +8,16 @@ html {
   font-size: 62.5%;
 }
 
+@include breakpoint($breakpoint-m) {
+  html {
+    font-size: 75%;
+  }
+}
+
 body {
   font-family: $font-main;
   font-size: 1.6rem;
+  background: $color-grey1;
 }
 
 a {

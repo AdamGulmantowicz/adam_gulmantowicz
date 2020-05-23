@@ -1,12 +1,23 @@
 .header {
   min-height: 100vh;
-  background: url(../img/bananas.png);
-  position: relative;
+  background: $gradient-main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-  &__heading {
+  &__text-wrap {
     color: $color-white;
-    position: absolute;
-    right: 0;
-    top: 50%;
+    text-align: right;
+    padding-right: $mg-medium;
+    width: 100%;
+
+    .heading,
+    .title {
+      text-shadow: $text-sha2;
+    }
+
+    .title {
+      letter-spacing: 2px;
+    }
   }
 }

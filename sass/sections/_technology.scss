@@ -1,27 +1,46 @@
 .technology {
-  text-align: center;
-  margin: $mg-huge * 2 auto;
+  margin: $mg-big auto;
+  padding: 0 $mg-medium;
+
+  &__heading {
+    border-bottom: $bor-main;
+    padding-bottom: $mg-tiny;
+    display: inline-block;
+  }
 
   &__list {
-    margin-top: $mg-huge;
+    margin-top: $mg-medium;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    text-align: center;
     flex-wrap: wrap;
     font-size: 6rem;
 
     i {
-      margin: 1rem 2rem;
+      flex: 1;
+      margin-right: $mg-medium;
+      margin-bottom: $mg-medium;
+
+      &::before {
+        background-image: $gradient-main;
+      }
     }
   }
 }
 
 @include breakpoint($breakpoint-m) {
   .technology {
+    margin: $mg-huge auto;
+
     &__list {
+      margin-top: $mg-big;
+      margin-right: 0;
 
       i {
-        margin: 2rem 4rem;
+        flex-basis: 10%;
+        margin: $mg-big 0;
+        padding: 0 $mg-medium;
       }
     }
   }
@@ -30,10 +49,7 @@
 @include breakpoint($breakpoint-l) {
   .technology {
     &__list {
-
-      i {
-        margin: 3rem 6rem;
-      }
+      margin-top: $mg-large;
     }
   }
 }

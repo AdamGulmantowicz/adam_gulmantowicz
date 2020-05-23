@@ -1,44 +1,117 @@
 .about {
-  min-height: 100vh;
-
   &__wrap {
-    padding: $mg-huge $mg-huge * 3;
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+    padding: $mg-big;
   }
 
   &__img {
-    margin-top: $mg-big;
     display: block;
-    max-width: 200px;
-    border-radius: 3px;
+    width: calc(250px + 2vh);
+    height: calc(250px + 2vh);
     box-shadow: $box-sha1;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &__text {
-    text-align: center;
+    margin-top: $mg-big;
     max-width: 500px;
 
-    p {
+    .text {
+      text-align: left;
       font-weight: 300;
-      font-size: 1.6rem;
     }
+  }
+
+  &__btn-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: $mg-medium;
+
+    .btn {
+      flex-grow: 1;
+      margin-bottom: $mg-small;
+      margin-right: $mg-small;
+      text-align: center;
+      width: 10rem;
+      height: 4rem;
+      font-size: 1.6rem;
+      @include flexCenter;
+    }
+
+    svg {
+      width: 1em;
+      height: 1em;
+    }
+  }
+
+  &__bg {
+    display: none;
   }
 }
 
 @include breakpoint($breakpoint-m) {
   .about {
-    padding: $mg-huge * 4 0;
-
     &__wrap {
-      flex-direction: row-reverse;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      padding: $mg-huge $mg-big;
+    }
+
+    &__text {
+      margin-top: 0;
+      margin-left: $mg-big;
+      max-width: 600px;
     }
 
     &__img {
-      margin-top: 0;
-      max-width: 300px;
+      height: calc(300px + 2vh);
+    }
+
+    &__btn-wrap {
+      margin-top: $mg-big;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-l) {
+  .about {
+    &__wrap {
+      margin: $mg-huge * 2 0;
+      padding: 0 $mg-medium;
+      justify-content: space-between;
+    }
+
+    &__text {
+      margin-left: $mg-large;
+
+      .text {
+        font-size: 1.4rem;
+      }
+    }
+
+    &__img {
+      height: calc(350px + 2vh);
+      width: calc(300px + 2vh);
+    }
+
+    &__bg {
+      display: block;
+      width: 200px;
+      padding-top: 30%;
+      align-self: stretch;
+      margin-left: $mg-big;
+      background: $gradient-main;
+      clip-path: polygon(0 0, 80% 0, 100% 20%, 100% 100%, 0 100%);
     }
   }
 }

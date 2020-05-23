@@ -1,31 +1,46 @@
-.splitter {
-  @include flexCenter;
-  position: relative;
-  overflow: visible;
-  margin: $mg-big 0;
+input,
+textarea {
+  background: transparent;
+  border: $bor-black;
+  padding: $mg-small;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+input {
+  border: none;
+  border-bottom: $bor-black;
+}
+
+textarea {
+  resize: none;
+}
+
+.btn {
+  background: $gradient-main;
+  display: inline-block;
+  padding: $mg-small $mg-medium;
+  text-decoration: none;
   border: none;
 
-  &::before {
-    content: '';
-    display: block;
-    width: 0;
-    height: 5px;
-    background: $gradient-main;
-    border-radius: 3px;
-    transform-origin: center;
-    animation: scaleToFull .6s ease-in .2s both;
+  &:focus,
+  &:active,
+  &:visited {
+    border: none;
+    outline: none;
   }
 
-  &::after {
-    display: block;
-    @include absCenter;
-    transform-origin: 0 0;
-    content: '';
-    width: 10px;
-    height: 10px;
-    border: 10px solid $color-white;
-    background: $gradient-main;
-    border-radius: 50%;
-    animation: rotate .6s ease-in 1 both;
+  i::before {
+    color: $color-black;
+  }
+
+  &--wire {
+    background: transparent;
+    border: $bor-black;
+    padding: $mg-small $mg-medium;
+    font-weight: bold;
   }
 }

@@ -1,62 +1,91 @@
-.experience {
+$icon-wrap-skew: 10deg;
 
-  .heading {
-    text-align: center;
+.experience {
+  padding: 0 $mg-medium;
+
+  &__heading {
+    border-bottom: $bor-main;
+    padding-bottom: $mg-tiny;
+    display: inline-block;
   }
 
   &__list {
     display: flex;
     flex-direction: column;
-    padding: 0 $mg-huge * 3;
+    align-items: center;
   }
 
   &__item {
-    margin: $mg-medium auto;
-    display: flex;
-    justify-content: space-between;
-    animation: textFadeLeft .4s ease-in-out forwards;
-
-    &:nth-child(even) {
-      flex-direction: row-reverse;
-      text-align: right;
-      animation: textFadeRight .4s ease-in-out forwards;
-    }
+    margin: $mg-small 0;
+    box-shadow: $box-sha1;
+    overflow: hidden;
   }
 
   &__text {
-    // max-width: 600px;
-    // display: flex;
-    // justify-content: space-between;
-    flex-basis: 75%;
+    padding: $mg-medium;
+  }
+
+  &__description {
+    font-weight: normal;
   }
 
   &__title {
-    padding-bottom: $mg-small;
-    border-bottom: 3px solid $color-secondary;
+    color: $color-black-light;
+    border-bottom: $bor-main;
+    padding-bottom: $mg-tiny;
+    display: inline-block;
   }
 
   &__time {
     font-weight: 300;
-    font-size: 1.4rem;
-  }
-
-  &__description {
-    margin: $mg-medium 0;
-    // flex-basis: 66%;
+    display: block;
+    margin-bottom: $mg-small;
   }
 
   &__technologies {
-    font-size: 3.2rem;
-    // flex-basis: 33%;
+    background: $gradient-cross;
+    margin-top: $mg-big;
+    padding: $mg-large $mg-medium $mg-huge;
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: $mg-medium;
+    transform: skewY(-$icon-wrap-skew);
+    box-shadow: $box-sha1;
 
     i {
-      &:not(:last-child) {
-        margin: $mg-tiny;
+      font-size: 4rem;
+      margin: $mg-small $mg-medium;
+      filter: contrast(3);
+      transform: skewY($icon-wrap-skew);
+    }
+  }
+}
+
+@include breakpoint($breakpoint-m) {
+  .experience {
+    &__list {
+      margin: $mg-big 0;
+    }
+
+    &__item {
+      display: flex;
+    }
+
+    &__text {
+      flex-basis: 65%;
+    }
+
+    $icon-wrap-skew: 15deg;
+
+    &__technologies {
+      margin-top: 0;
+      margin-left: $mg-medium;
+      padding: $mg-medium $mg-big $mg-medium $mg-big;
+      transform: skewX(-$icon-wrap-skew);
+
+      i {
+        margin: $mg-medium $mg-large;
+        transform: skewX($icon-wrap-skew);
       }
     }
   }

@@ -6,13 +6,165 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/main.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css" />
   <title>Adam Gulmantowicz || Portfolio</title>
 </head>
 
 <body>
   <header class="header">
-    <h1 class="header__heading">Adam Gulmantowicz</h1>
+    <div class="header__text-wrap container">
+      <h1 class="header__heading heading">Adam Gulmantowicz</h1>
+      <span class="title">Fullstack Developer</span>
+    </div>
   </header>
+  <section class="about container">
+    <div class="about__wrap">
+      <figure class="about__img">
+        <img src="img/adam_gulmantowicz.jpg" alt="Adam Gulmantowicz" />
+      </figure>
+      <div class="about__text">
+        <p class="text">
+          Nazywam się Adam Gulmantowicz. Jestem młodym, nastawionym na stały
+          rozwój programistą. Swoją przygodę rozpocząłem w liceum, a obecnie
+          pracuję już od prawie roku w firmie AuroraCreation na stanowisku
+          Frontend Developer, gdzie specjalizuje się w technologii Magento.
+        </p>
+        <p class="text">
+          Programowanie jest moją pracą, a także pasją, więc ze starannością
+          wykonuje powierzone mi projekty. W wolnych chwilach pracuję również
+          jako freelancer. Jestem otwarty na propozycje i wizję klienta.
+        </p>
+        <div class="about__btn-wrap">
+          <a target="_blank" href="https://github.com/AdamGulmantowicz" class="btn">
+            <i class="devicon-github-plain"></i>
+          </a>
+          <a target="_blank" href="" class="btn">
+            CV
+          </a>
+          <a href="adam.gulmantowicz@interia.pl" class="btn">
+            <svg>
+              <use href="img/symbol-defs.svg#icon-envelop">
+            </svg>
+          </a>
+          <a href="tel:533-299-423" class="btn">
+            <svg>
+              <use href="img/symbol-defs.svg#icon-mobile">
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="about__bg"></div>
+    </div>
+  </section>
+
+  <section class="experience container">
+    <h1 class="experience__heading heading">Experience</h1>
+    <ul class="experience__list">
+      <li class="experience__item">
+        <div class="experience__text">
+          <h2 class="experience__title">
+            Aurora Creation
+          </h2>
+          <span class="experience__time">
+            October 2019 - now
+          </span>
+          <p class="experience__description text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Recusandae dicta nesciunt consequuntur ipsum nemo unde vel et
+            doloremque delectus. Ab!
+          </p>
+        </div>
+        <div class="experience__technologies">
+          <i class="devicon-less-plain-wordmark"></i>
+          <i class="devicon-sass-original"></i>
+          <i class="devicon-javascript-plain"></i>
+          <i class="devicon-grunt-plain"></i>
+          <i class="devicon-jquery-plain"></i>
+        </div>
+      </li>
+      <li class="experience__item">
+        <div class="experience__text">
+          <h2 class="experience__title">
+            Fast White Cat
+          </h2>
+          <span class="experience__time">
+            March - April 2020
+          </span>
+          <p class="experience__description text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Recusandae dicta nesciunt consequuntur ipsum nemo unde vel et
+            doloremque delectus. Ab!
+          </p>
+        </div>
+        <div class="experience__technologies">
+          <i class="devicon-less-plain-wordmark"></i>
+          <i class="devicon-javascript-plain"></i>
+          <i class="devicon-gulp-plain"></i>
+          <i class="devicon-bower-plain"></i>
+          <i class="devicon-jquery-plain"></i>
+        </div>
+      </li>
+      <li class="experience__item">
+        <div class="experience__text">
+          <h2 class="experience__title">
+            Freelancing
+          </h2>
+          <span class="experience__time">
+            2019 - now
+          </span>
+          <p class="experience__description text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Recusandae dicta nesciunt consequuntur ipsum nemo unde vel et
+            doloremque delectus. Ab!
+          </p>
+        </div>
+        <div class="experience__technologies">
+          <i class="devicon-react-original"></i>
+          <i class="devicon-sass-original"></i>
+          <i class="devicon-javascript-plain"></i>
+          <i class="devicon-nodejs-plain"></i>
+          <i class="devicon-mongodb-plain"></i>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <section class="technology container">
+    <h2 class="technology__heading heading">
+      Technologies
+    </h2>
+    <div class="technology__list">
+      <i class="devicon-react-original"></i>
+      <i class="devicon-sass-original"></i>
+      <i class="devicon-javascript-plain"></i>
+      <i class="devicon-express-original"></i>
+      <i class="devicon-nodejs-plain"></i>
+      <i class="devicon-mongodb-plain"></i>
+      <i class="devicon-babel-plain"></i>
+      <i class="devicon-css3-plain"></i>
+      <i class="devicon-git-plain"></i>
+      <i class="devicon-grunt-plain"></i>
+      <i class="devicon-gulp-plain"></i>
+      <i class="devicon-html5-plain"></i>
+      <i class="devicon-javascript-plain"></i>
+      <i class="devicon-jquery-plain"></i>
+      <i class="devicon-less-plain-wordmark"></i>
+      <i class="devicon-ubuntu-plain"></i>
+      <i class="devicon-webpack-plain"></i>
+      <i class="devicon-bower-plain"></i>
+    </div>
+  </section>
+  <section class="contact">
+    <div class="contact__wrap container">
+      <h2 class="contact__heading heading">Contact</h2>
+      <form class="contact__form">
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="email" id="mail" placeholder="Your Email">
+        <textarea id="message" placeholder="Say hello!"></textarea>
+        <button id="contact-btn" class="btn btn--wire" type="submit">Send</button>
+      </form>
+    </div>
+  </section>
 </body>
 
 </html>
