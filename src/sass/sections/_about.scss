@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: $mg-big;
+    padding: $mg-medium;
   }
 
   &__img {
@@ -64,7 +64,7 @@
       flex-direction: row;
       justify-content: center;
       align-items: flex-start;
-      padding: $mg-huge $mg-big;
+      padding: $mg-huge $mg-medium;
     }
 
     &__text {

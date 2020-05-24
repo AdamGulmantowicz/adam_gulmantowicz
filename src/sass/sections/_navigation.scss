@@ -8,8 +8,8 @@
 
   .hamburger-bg {
     background: $gradient-second;
-    width: 4rem;
-    height: 4rem;
+    width: 5rem;
+    height: 5rem;
     box-shadow: $box-sha1;
     border-radius: 50%;
     transition: all .5s;
@@ -97,6 +97,7 @@
     text-transform: uppercase;
     text-shadow: $text-sha1;
     text-decoration: none;
+    cursor: pointer;
     transition: all .2s;
 
     &:hover {

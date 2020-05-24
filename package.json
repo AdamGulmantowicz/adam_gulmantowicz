@@ -4,12 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "js": "parcel watch ./src/js/index.js --out-dir ./js --out-file bundle.js",
+    "sass": "gulp sass:watch"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-sass": "^4.1.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.8.7",
+    "axios": "^0.19.2",
+    "jquery": "^3.5.1"
   }
 }

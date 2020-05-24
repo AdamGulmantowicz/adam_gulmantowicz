@@ -16,8 +16,14 @@
       text-shadow: $text-sha2;
     }
 
+    .heading {
+      animation: textFadeUp .4s ease-in;
+    }
+
     .title {
       letter-spacing: 2px;
+      animation: textFadeRight .4s ease-in;
+      display: block;
     }
   }
 }

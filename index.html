@@ -20,11 +20,11 @@
         <div  class="hamburger"></div>
       </label>
       <ul class="nav__menu">
-        <a href="#about" class="nav__item">About</a>
-        <a href="#experience" class="nav__item">Experience</a>
-        <a href="#projects" class="nav__item">Projects</a>
-        <a href="#technology" class="nav__item">Technologies</a>
-        <a href="#contact" class="nav__item">Contact</a>
+        <li data-scrollTo="#about" class="nav__item">About</li>
+        <li data-scrollTo="#experience" class="nav__item">Experience</li>
+        <li data-scrollTo="#projects" class="nav__item">Projects</li>
+        <li data-scrollTo="#technology" class="nav__item">Technologies</li>
+        <li data-scrollTo="#contact" class="nav__item">Contact</li>
       </ul>
     </nav>
     <div class="header__text-wrap container">
@@ -198,14 +198,15 @@
   <section id="contact" class="contact">
     <div class="contact__wrap container">
       <h2 class="contact__heading heading">Contact</h2>
-      <form class="contact__form">
-        <input type="text" id="name" placeholder="Your Name">
-        <input type="email" id="mail" placeholder="Your Email">
-        <textarea id="message" placeholder="Say hello!"></textarea>
-        <button id="contact-btn" class="btn btn--wire" type="submit">Send</button>
+      <form class="contact__form" id="contactForm">
+        <input required type="text" name="name" id="name" placeholder="Your Name">
+        <input required type="email" name="email" id="email" placeholder="Your Email">
+        <textarea required id="message" name="message" placeholder="Say hello!"></textarea>
+        <button class="btn btn--wire" type="submit">Send</button>
       </form>
     </div>
   </section>
+  <script type="text/javascript" src="./js/bundle.js"></script>
 </body>
 
 </html>
