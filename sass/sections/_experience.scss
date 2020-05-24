@@ -4,9 +4,7 @@ $icon-wrap-skew: 10deg;
   padding: 0 $mg-medium;
 
   &__heading {
-    border-bottom: $bor-main;
-    padding-bottom: $mg-tiny;
-    display: inline-block;
+    @include borderedTitle;
   }
 
   &__list {
@@ -31,9 +29,7 @@ $icon-wrap-skew: 10deg;
 
   &__title {
     color: $color-black-light;
-    border-bottom: $bor-main;
-    padding-bottom: $mg-tiny;
-    display: inline-block;
+    @include borderedTitle;
   }
 
   &__time {

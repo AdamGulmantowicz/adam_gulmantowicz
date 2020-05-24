@@ -5,8 +5,8 @@
   flex-direction: $direction;
 }
 
-@mixin absCenter($addTransform: '') {
-  position: absolute;
+@mixin absCenter($addTransform: '', $position: absolute) {
+  position: $position;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) #{$addTransform};
@@ -16,4 +16,10 @@
   @media screen and(min-width: $breakpoint) {
     @content;
   }
+}
+
+@mixin borderedTitle {
+  border-bottom: $bor-main;
+  padding-bottom: $mg-tiny;
+  display: inline-block;
 }

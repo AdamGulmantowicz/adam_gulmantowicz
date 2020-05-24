@@ -1,0 +1,105 @@
+.nav {
+  .hamburger-wrap {
+    position: fixed;
+    z-index: 5;
+    bottom: $mg-small;
+    right: $mg-small;
+  }
+
+  .hamburger-bg {
+    background: $gradient-second;
+    width: 4rem;
+    height: 4rem;
+    box-shadow: $box-sha1;
+    border-radius: 50%;
+    transition: all .5s;
+  }
+
+  .hamburger {
+    @include absCenter;
+    transform-origin: 0 0;
+
+    &,
+    &::before,
+    &::after {
+      background: $color-black-light;
+      width: 15px;
+      height: 2px;
+      display: block;
+      transform-origin: center;
+      transition: all .2s;
+      cursor: pointer;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+    }
+
+    &::before {
+      transform: translateY(-4px);
+    }
+
+    &::after {
+      transform: translateY(2px);
+    }
+  }
+
+  &__input {
+    display: none;
+
+    &:checked {
+      &~.hamburger-wrap {
+        .hamburger-bg {
+          transform: scale(100);
+        }
+
+        .hamburger {
+          height: 0;
+
+          &::before {
+            transform: rotate(405deg) translate(-8%, -20%);
+          }
+
+          &::after {
+            transform: rotate(-405deg) translate(10%, -108%);
+          }
+        }
+      }
+
+      &~.nav__menu {
+        opacity: 1;
+        left: 50%;
+      }
+    }
+  }
+
+  &__menu {
+    @include absCenter('', fixed);
+    left: 100%;
+    z-index: 10;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    color: $color-white;
+    transition: all .2s;
+  }
+
+  &__item {
+    position: relative;
+    z-index: 11;
+    font-size: 3rem;
+    font-weight: bold;
+    padding: $mg-tiny $mg-small;
+    overflow: hidden;
+    text-transform: uppercase;
+    text-shadow: $text-sha1;
+    text-decoration: none;
+    transition: all .2s;
+
+    &:hover {
+      background: white;
+      color: $color-orange;
+    }
+  }
+}

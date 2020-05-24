@@ -3,9 +3,7 @@
   padding: 0 $mg-medium;
 
   &__heading {
-    border-bottom: $bor-main;
-    padding-bottom: $mg-tiny;
-    display: inline-block;
+    @include borderedTitle;
   }
 
   &__list {

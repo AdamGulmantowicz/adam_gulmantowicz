@@ -25,12 +25,18 @@ textarea {
   padding: $mg-small $mg-medium;
   text-decoration: none;
   border: none;
+  cursor: pointer;
 
   &:focus,
   &:active,
   &:visited {
     border: none;
     outline: none;
+  }
+
+  &[disabled] {
+    filter: grayscale(70%);
+    cursor: not-allowed;
   }
 
   i::before {
