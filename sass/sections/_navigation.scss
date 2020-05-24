@@ -68,6 +68,7 @@
       }
 
       &~.nav__menu {
+        width: auto;
         opacity: 1;
         left: 50%;
       }
@@ -76,13 +77,14 @@
 
   &__menu {
     @include absCenter('', fixed);
+    display: flex;
+    width: 0;
     left: 100%;
     z-index: 10;
     opacity: 0;
-    display: flex;
     flex-direction: column;
     color: $color-white;
-    transition: all .2s;
+    transition: width 0s, all .2s;
   }
 
   &__item {
