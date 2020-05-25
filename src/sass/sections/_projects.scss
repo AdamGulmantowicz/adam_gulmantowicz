@@ -34,6 +34,10 @@
         opacity: .8;
       }
 
+      img {
+        filter: blur(4px);
+      }
+
       .projects__info {
         opacity: 1;
       }
