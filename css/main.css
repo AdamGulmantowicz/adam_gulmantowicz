@@ -327,6 +327,14 @@ ul {
     background: white;
     color: #FFD18D; }
 
+@media screen and (min-width: 768px) {
+  .nav .hamburger-wrap {
+    bottom: 20px;
+    right: 20px; }
+  .nav .hamburger-bg {
+    width: 6rem;
+    height: 6rem; } }
+
 .about__wrap {
   position: relative;
   display: flex;
@@ -571,7 +579,7 @@ ul {
     display: flex;
     flex-wrap: wrap; }
   .projects__item {
-    flex-basis: 50%; }
+    flex-basis: 33.333%; }
   .projects__bg {
     height: calc(300px); } }
 

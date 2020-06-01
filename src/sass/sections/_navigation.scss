@@ -106,3 +106,17 @@
     }
   }
 }
+
+@include breakpoint($breakpoint-m) {
+  .nav {
+    .hamburger-wrap {
+      bottom: $mg-medium;
+      right: $mg-medium;
+    }
+
+    .hamburger-bg {
+      width: 6rem;
+      height: 6rem;
+    }
+  }
+}
