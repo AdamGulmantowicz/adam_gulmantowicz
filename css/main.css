@@ -573,6 +573,9 @@ ul {
     margin: 0 auto;
     font-size: 3rem;
     text-shadow: 1px 3px rgba(0, 0, 0, 0.12), 1px 2px rgba(0, 0, 0, 0.24); }
+    .projects__item-title span {
+      display: block;
+      font-size: 1.6rem; }
 
 @media screen and (min-width: 768px) {
   .projects__list {
